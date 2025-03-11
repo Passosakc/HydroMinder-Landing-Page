@@ -1,0 +1,145 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #00A9E0;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: white;
+    color: #00A9E0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.store-links {
+    margin-top: 20px;
+}
+
+.store-links img {
+    margin: 0 10px;
+}
+
+/* Seção Sobre */
+#sobre {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 32px;
+    color: #00A9E0;
+    margin-bottom: 20px;
+}
+
+#sobre img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seção Funcionalidades */
+#funcionalidades {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#funcionalidades h2 {
+    font-size: 32px;
+    color: #00A9E0;
+    margin-bottom: 40px;
+}
+
+.funcionalidade {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.funcionalidade img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.funcionalidade h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Testemunhos */
+#testemunhos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#testemunhos h2 {
+    font-size: 32px;
+    color: #00A9E0;
+    margin-bottom: 40px;
+}
+
+.testemunho {
+    width: 45%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* CTA Final */
+#cta {
+    padding: 60px 20px;
+    background-color: #00A9E0;
+    color: white;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
