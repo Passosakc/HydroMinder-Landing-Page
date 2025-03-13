@@ -223,7 +223,7 @@ body {
 }
 
 .sobre-image {
-    flex: 1;
+    flex: 0.4;
 }
 
 .sobre-image img {
