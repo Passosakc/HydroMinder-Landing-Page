@@ -8,69 +8,253 @@
 /* Corpo */
 body {
     font-family: 'Arial', sans-serif;
+    padding-top: 50px;
     background-color: #f5f5f5;
     color: #333;
 }
 
+/* Header */
+/* Header sem scroll */
+#sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 100%);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+/* Header com scroll (quando a hero sai da tela) */
+#sticky-header.scrolled {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    background: white;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+#sticky-header.scrolled.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Logo */
+#sticky-header img {
+    max-width: 110px;
+}
+
+/* Navigation */
+#sticky-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigation Links */
+#sticky-header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#sticky-header .nav-links a {
+    color: #00334d; /* Dark text */
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#sticky-header .nav-links a:hover {
+    color: #00A9E0;
+}
+
+/* Contact Button */
+#sticky-header .nav-links .cta-btn {
+    background-color: transparent;
+    color: #00334d;
+    padding: 12px 22px;
+    border: 2px solid #00334d;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#sticky-header .nav-links .cta-btn:hover {
+    background-color: #00334d;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #sticky-header {
+        padding: 15px 20px;
+    }
+
+    #sticky-header .nav-links {
+        gap: 15px;
+    }
+
+    #sticky-header .nav-links a {
+        font-size: 14px;
+    }
+
+    #sticky-header .nav-links .cta-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+
 /* Hero Section */
 #hero {
-    background-color: #00A9E0;
-    color: white;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 169, 224, 0.2) 0%, #ffffff 30%, #ffffff 70%, rgba(21, 211, 201, 0.2) 100%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 80px 20px;
 }
 
+/* Hero Title */
 #hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 700;
+    color: #00334d;
+    margin-bottom: 15px;
 }
 
+#hero h1 span {
+    color: #00A9E0; /* Highlights "HydroMinder" */
+}
+
+/* Hero Text */
 #hero p {
     font-size: 20px;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 30px;
+    color: #555;
 }
 
+/* CTA Button */
 .cta-btn {
-    background-color: white;
-    color: #00A9E0;
+    background-color: #00A9E0;
+    color: white;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
+.cta-btn:hover {
+    background-color: #0085b3;
+}
+
+/* Store Links */
 .store-links {
-    margin-top: 20px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .store-links img {
-    margin: 0 10px;
+    height: 50px;
+    transition: 0.3s ease-in-out;
 }
 
-/* Seção Sobre */
+.store-links img:hover {
+    transform: scale(1.05);
+}
+
+/* Seção Sobre - Seção 1 */
 #sobre {
     padding: 60px 20px;
     text-align: center;
+    background-color: #ffffff;
 }
 
 #sobre h2 {
     font-size: 32px;
-    color: #00A9E0;
-    margin-bottom: 20px;
+    color: #00334d;
+    margin-bottom: 40px;
 }
 
-#sobre img {
+#sobre h2 span {
+    color: #00A9E0;
+}
+
+.sobre-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.sobre-text {
+    flex: 1;
+    text-align: left;
+}
+
+.sobre-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.sobre-image {
+    flex: 0.4;
+}
+
+.sobre-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
 }
 
-/* Seção Funcionalidades */
+.sobre-image img:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .sobre-content {
+        flex-direction: column;
+    }
+    
+    .sobre-text {
+        text-align: center;
+    }
+}
+
+/* Seção Funcionalidades - Seção 2 */
 #funcionalidades {
     padding: 60px 20px;
-    background-color: #f5f5f5;
     text-align: center;
+    background-color: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+    border-bottom: 2px solid #e9ecef;
 }
 
 #funcionalidades h2 {
@@ -82,25 +266,53 @@ body {
 .funcionalidade {
     display: inline-block;
     width: 30%;
-    margin: 0 10px;
+    margin: 20px 10px;
     text-align: center;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.funcionalidade:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .funcionalidade img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(0, 169, 224, 0.2));
 }
 
 .funcionalidade h3 {
     font-size: 24px;
-    margin-bottom: 10px;
+    color: #00A9E0;
+    margin-bottom: 15px;
+}
+
+.funcionalidade p {
+    font-size: 18px;
+    color: #00334d;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .funcionalidade {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
 
 /* Testemunhos */
 #testemunhos {
     padding: 60px 20px;
     text-align: center;
+    background-color: #f8f9fa;
 }
 
 #testemunhos h2 {
@@ -109,12 +321,51 @@ body {
     margin-bottom: 40px;
 }
 
-.testemunho {
-    width: 45%;
+.testemunhos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+}
+
+.testemunho-card {
+    width: 45%;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease-in-out;
+}
+
+.testemunho-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 169, 224, 0.1);
+}
+
+.testemunho-texto {
     font-size: 18px;
-    color: #333333;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testemunho-autor {
+    font-size: 16px;
+    color: #00A9E0;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .testemunhos-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .testemunho-card {
+        width: 100%;
+    }
 }
 
 /* CTA Final */
@@ -128,6 +379,43 @@ body {
 #cta h2 {
     font-size: 32px;
     margin-bottom: 30px;
+    font-weight: 700;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fix button alignment */
+#cta div {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#cta div a img {
+    height: 50px; /* Uniform height */
+    width: auto;  /* Maintain aspect ratio */
+    transition: 0.3s ease-in-out;
+}
+
+#cta div a img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    #cta {
+        padding: 40px 20px;
+    }
+
+    #cta h2 {
+        font-size: 24px;
+    }
+
+    #cta div {
+        flex-direction: column;
+    }
 }
 
 /* Rodapé */
@@ -135,11 +423,32 @@ footer {
     background-color: #333333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    margin-top: 0px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00A9E0;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 15px;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
 }

@@ -4,58 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HydroMinder - Aplique a Hidratação</title>
+    <title>Hydrominder - Aplique a Hidratação</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header id="sticky-header">
+        <div id="header-left">
+            <div class="logo">
+                <h1>Hydrominder</h1>
+            </div>
+        </div>
+    
+        <nav>
+            <div class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#" class="cta-btn">Baixar</a>
+            </div>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section id="hero">
-        <h1>Mantenha-se Hidratado com o HydroMinder</h1>
-        <p>Acompanhe sua ingestão diária de água e crie hábitos saudáveis com o nosso aplicativo simples e eficaz.</p>
-        <a href="#" class="cta-btn">Baixe o App Agora</a>
+        <h1>Hidrate-se facilmente com o <span>Hydrominder</span></h1>
+        <p>Monitore sua ingestão diária de água, receba lembretes e desenvolva hábitos mais saudáveis com um aplicativo intuitivo e fácil de usar.</p>
+    
+        <a href="#" class="cta-btn">Baixar Agora</a>
+    
         <div class="store-links">
-            <a href="#" target="_blank"><img src="https://logodownload.org/wp-content/uploads/2017/04/disponivel-google-play-badge.png" alt="Google Play" width="150px"></a>
-            <a href="#" target="_blank"><img src="https://www.ufac.br/sei/app.fw.png/@@images/3eb3580f-2810-4dbb-873b-2ccf8c308372.png" alt="App Store" width="150px"></a>
+            <a href="#" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Play">
+            </a>
+            <a href="#" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+            </a>
         </div>
     </section>
+    
 
-    <!-- Sobre o HydroMinder -->
+    <!-- Sobre o Hydrominder -->
     <section id="sobre">
-        <h2>O que é o HydroMinder?</h2>
-        <p>O HydroMinder é um aplicativo inovador para ajudar você a manter uma hidratação adequada todos os dias...</p>
-        <img src="images/app-interface.png" alt="Interface do HydroMinder">
+        <h2>O que é o <span>Hydrominder</span>?</h2>
+        <div class="sobre-content">
+            <div class="sobre-text">
+                <p>O HydroMinder é um aplicativo inovador projetado para transformar sua rotina de hidratação. Com uma interface intuitiva e recursos inteligentes, ajudamos você a manter uma hidratação adequada e consistente todos os dias.</p>
+                <p>Desenvolvido com foco em sua saúde e bem-estar, o HydroMinder torna o hábito de beber água uma experiência agradável e motivadora.</p>
+                <a href="#" class="cta-btn">Comece Agora</a>
+            </div>
+            <div class="sobre-image">
+                <img src="assets/Adobe Express - file.png" alt="Interface do HydroMinder" class="app-preview">
+            </div>
+        </div>
     </section>
-
+    
     <!-- Funcionalidades -->
     <section id="funcionalidades">
         <h2>Funcionalidades</h2>
         <div class="funcionalidade">
-            <img src="images/meta-icon.png" alt="Metas">
+            <img src="assets/goal.png" alt="Metas">
             <h3>Metas Personalizadas</h3>
             <p>Defina suas metas diárias de consumo de água, adaptadas ao seu estilo de vida.</p>
+           
         </div>
         <div class="funcionalidade">
-            <img src="images/lembrete-icon.png" alt="Lembretes">
+            <img src="assets/bell.png" alt="Lembretes">
             <h3>Lembretes Inteligentes</h3>
             <p>Receba notificações periódicas para se lembrar de beber água.</p>
         </div>
         <div class="funcionalidade">
-            <img src="images/grafico-icon.png" alt="Progresso">
+            <img src="assets/diagram.png" alt="Progresso">
             <h3>Relatórios de Progresso</h3>
             <p>Acompanhe seu consumo de água com gráficos de progresso.</p>
         </div>
     </section>
 
     <!-- Testemunhos -->
-    <section id="testemunhos">
-        <h2>O que dizem nossos usuários?</h2>
-        <div class="testemunho">
-            <p>"Com o HydroMinder, finalmente criei o hábito de beber água regularmente..."</p>
-            <p>- João, 34 anos</p>
-        </div>
-        <div class="testemunho">
-            <p>"Sofro de insuficiência renal, e o HydroMinder me ajuda a controlar minha ingestão de líquidos..."</p>
-            <p>- Maria, 65 anos</p>
+    <section id="testemunhos" class="testemunhos-section">
+        <h2 class="testemunhos-title">O que dizem nossos usuários?</h2>
+        <div class="testemunhos-container">
+            <div class="testemunho-card">
+                <p class="testemunho-texto">"Com o Hydrominder, finalmente criei o hábito de beber água regularmente..."</p>
+                <p class="testemunho-autor">- João, 34 anos</p>
+            </div>
+            <div class="testemunho-card">
+                <p class="testemunho-texto">"Sofro de insuficiência renal, e o Hydrominder me ajuda a controlar minha ingestão de líquidos..."</p>
+                <p class="testemunho-autor">- Maria, 65 anos</p>
+            </div>
         </div>
     </section>
 
@@ -71,7 +105,9 @@
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 HydroMinder | Todos os direitos reservados</p>
-        <p><a href="#">Sobre</a> | <a href="#">Política de Privacidade</a> | <a href="#">Ajuda</a></p>
+        <p><a href="#">Sobre</a> | <a href="#">Política de Privacidade</a> | <a href="#">Ajuda</a> | <a href="https://github.com/Passosakc/HydroMinder-Landing-Page">Github do projeto</a></p>
+        <div> Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"> Pixel perfect </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+        <div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
     </footer>
 </body>
 </html>
